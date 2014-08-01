@@ -1,6 +1,6 @@
 <?php
 
-namespace MainLoader;
+namespace MineCombat;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 
-class MainLoader extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener{
 
 	public function onLoad(){
 		$this->getLogger()->info(TextFormat::WHITE . "MineCombat 로딩 완료.");
@@ -18,9 +18,6 @@ class MainLoader extends PluginBase implements Listener{
 
 	public function onEnable(){
 		$this->getLogger()->info(TextFormat::DARK_GREEN . "MineCombat 활성화 완료");
-		$this->getServer()->getPluginManager()->registerInterface("MineCombat\\MainClass");
-		$this->getServer()->getPluginManager()->loadPlugins($this->getServer()->getPluginPath(), array("MineCombat\\MainClass", "MineCombat\\AntiSpam"));
-		$this->getServer()->enablePlugins(PluginLoadOrder::STARTUP);
     }
 
 
