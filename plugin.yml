@@ -8,4 +8,4 @@ website: http://cafe.naver.com/minecraftpe
 commands:
  mc:
   description: MineCombat main command
-  usage: "Usage: /mc, In PROGRESS"
+  usage: "Usage: /mc <start|stop|score>"
